@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppings", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
+
 body {
     background-color: #191919;
     display: flex;
@@ -14,11 +15,18 @@ body {
     justify-content: center;
     flex-direction: column;
     color: white;
+    padding: 20px; /* Evita que o conteúdo fique colado nas bordas em telas pequenas */
+    text-align: center;
 }
 
 canvas {
+    width: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    display: block;
     background-color: #111;
 }
+
 .score {
     display: flex;
     flex-direction: column;
@@ -28,8 +36,7 @@ canvas {
 
 .score-value {
     font-weight: 700;
-    font-size:  4.5em;
-    display: block;
+    font-size: 4.5em;
     margin-top: -10px;
 }
 
@@ -55,10 +62,10 @@ canvas {
 .btn-play {
     border: none;
     border-radius: 100px;
-    padding: 10px 15px 10px 12px;
+    padding: 10px 15px;
     font-size: 1rem;
     font-weight: 600;
-    color:   #ffcc00;
+    color: #ffcc00;
     margin-top: 40px;
     display: flex;
     align-items: center;
@@ -66,6 +73,7 @@ canvas {
     gap: 5px;
     cursor: pointer;
 }
+
 .controls {
     display: flex;
     flex-direction: column;
@@ -91,4 +99,64 @@ button {
 
 button:active {
     background-color: #444;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .score-value {
+        font-size: 3.5em; /* Reduz o tamanho da pontuação */
+    }
+
+    .game-over {
+        font-size: 2.5rem;
+    }
+
+    .final-score {
+        font-size: 1.3rem;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    canvas {
+        max-width: 90%; /* Garante que o canvas não fique muito pequeno */
+        max-height: 90vw;
+    }
+
+    .score-value {
+        font-size: 3em;
+    }
+
+    .game-over {
+        font-size: 2rem;
+    }
+
+    .final-score {
+        font-size: 1.2rem;
+    }
+
+    .btn-play {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .controls {
+        margin-top: 15px;
+    }
 }
