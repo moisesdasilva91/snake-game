@@ -208,3 +208,19 @@ buttonPlay.addEventListener("click", () => {
 
     snake = [initialPosition]
 })
+
+document.getElementById("up").addEventListener("click", () => {
+    if (direction !== "down") direction = "up";
+});
+
+document.getElementById("down").addEventListener("click", () => {
+    if (direction !== "up") direction = "down";
+});
+
+document.getElementById("left").addEventListener("click", () => {
+    if (direction !== "right") direction = "left";
+});
+
+document.getElementById("right").addEventListener("click", () => {
+    if (direction !== "left") direction = "right";
+});

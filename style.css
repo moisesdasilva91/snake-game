@@ -58,11 +58,37 @@ canvas {
     padding: 10px 15px 10px 12px;
     font-size: 1rem;
     font-weight: 600;
-    color: #333;
+    color:   #ffcc00;
     margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
     cursor: pointer;
+}
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.horizontal {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    background-color: #191919;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #444;
 }
