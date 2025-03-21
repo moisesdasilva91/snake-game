@@ -60,18 +60,28 @@ canvas {
 }
 
 .btn-play {
-    border: none;
-    border-radius: 100px;
-    padding: 10px 15px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #ffcc00;
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    cursor: pointer;
+    .btn-play {
+        border: none;
+        border-radius: 100px;
+        padding: 10px 15px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #ffcc00;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+        
+        /* Remove efeito de toque no Chrome Android */
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+        appearance: none;
+        -webkit-appearance: none;
+    }
+    
 }
 
 .controls {
